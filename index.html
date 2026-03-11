@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HFL Operating Model™ — Connect Strategy to Execution</title>
+  <meta
+    name="description"
+    content="The HFL Operating Model™ helps leadership teams connect strategy to execution through intentional cadence, alignment, and disciplined operating rhythms."
+  />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="HFL Operating Model™" />
+  <meta
+    property="og:description"
+    content="A leadership operating model designed to connect strategy to execution."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og-image.jpg" />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #5e5e5e;
+      --line: rgba(17, 17, 17, 0.12);
+      --line-strong: rgba(17, 17, 17, 0.22);
+      --accent: #8d1f1f;
+      --accent-dark: #6f1818;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+      --max: 1120px;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 18px 0;
+    }
+
+    .site-header__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand__mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      font-size: 0.82rem;
+    }
+
+    .brand__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand__name {
+      font-size: 0.98rem;
+    }
+
+    .brand__sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .header-link {
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 160ms ease, color 160ms ease;
+    }
+
+    .header-link:hover {
+      color: var(--text);
+      border-color: var(--line-strong);
+    }
+
+    .hero {
+      padding: 44px 0 28px;
+    }
+
+    .hero__card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.94));
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 36px;
+      padding: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 34px;
+      height: 1px;
+      background: var(--line-strong);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+      max-width: 11ch;
+    }
+
+    .hero__lede {
+      font-size: 1.18rem;
+      line-height: 1.5;
+      color: var(--muted);
+      max-width: 58ch;
+      margin-bottom: 18px;
+    }
+
+    .hero__thesis {
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      border: 1px solid transparent;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button--primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .button--primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button--secondary {
+      background: transparent;
+      border-color: var(--line-strong);
+      color: var(--text);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .signal-card {
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fcfcfb;
+      padding: 26px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .signal-card__label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .signal-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .signal-item {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+
+    .signal-item strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .signal-item span {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .section {
+      padding: 30px 0;
+    }
+
+    .section--spacious {
+      padding: 54px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3vw, 2.9rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.04rem;
+      max-width: 70ch;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .problem-card,
+    .pillar,
+    .tier,
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-card {
+      padding: 24px;
+    }
+
+    .problem-card h3,
+    .pillar h3,
+    .tier h3,
+    .contact-card h3 {
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .problem-card p,
+    .pillar p,
+    .tier p,
+    .contact-card p,
+    .tier li,
+    label,
+    input,
+    textarea {
+      font-size: 0.98rem;
+    }
+
+    .problem-card p,
+    .pillar p,
+    .tier p,
+    .contact-card p,
+    .tier ul,
+    .contact-meta {
+      color: var(--muted);
+    }
+
+    .model-shell {
+      display: grid;
+      gap: 18px;
+    }
+
+    .model-visual {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .loop {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .pillar {
+      padding: 20px;
+      min-height: 200px;
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent);
+      opacity: 0.85;
+    }
+
+    .pillar__num {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tier {
+      padding: 26px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .tier__level {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .tier__tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(141, 31, 31, 0.08);
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .tier ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+    }
+
+    .contact-card {
+      padding: 28px;
+    }
+
+    .contact-meta {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: #fff;
+      color: var(--text);
+      padding: 14px 16px;
+      font: inherit;
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(141, 31, 31, 0.08);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .footer {
+      padding: 28px 0 44px;
+    }
+
+    .footer__row {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1024px) {
+      .hero__inner,
+      .contact-grid,
+      .loop,
+      .tiers,
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar {
+        min-height: unset;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero__inner {
+        padding: 28px;
+        gap: 24px;
+      }
+
+      .site-header__row,
+      .footer__row {
+        align-items: flex-start;
+      }
+
+      .hero__actions {
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__row">
+      <a class="brand" href="#top" aria-label="HFL Operating Model home">
+        <span class="brand__mark">HFL</span>
+        <span class="brand__meta">
+          <span class="brand__name">The HFL Operating Model™</span>
+          <span class="brand__sub">Implemented by Wisconsin Agility</span>
+        </span>
+      </a>
+
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__card">
+        <div class="hero__inner">
+          <div>
+            <div class="eyebrow">High Frequency Leadership</div>
+            <h1>Connect strategy to execution.</h1>
+            <p class="hero__lede">
+              The HFL Operating Model™ helps leadership teams increase alignment,
+              accelerate decision cycles, and translate strategic intent into
+              disciplined execution.
+            </p>
+            <p class="hero__thesis">
+              Most organizations do not have a strategy problem. They have a
+              leadership operating cadence problem.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div>© <span id="year"></span> HFL Operating Model™</div>
+      <div>Implemented by Wisconsin Agility</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
