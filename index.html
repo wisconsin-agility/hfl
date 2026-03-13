@@ -8,15 +8,32 @@
     name="description"
     content="The High Frequency Leadership Operating Model helps leadership teams improve alignment, planning, strategy execution, and organizational health."
   />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="canonical" href="https://www.hfloperatingmodel.com/" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#8d1f1f" />
   <meta property="og:title" content="HFL Operating Model™" />
   <meta
     property="og:description"
     content="A leadership operating model designed to connect strategy to execution."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:image" content="https://www.hfloperatingmodel.com/images/hfl-logo-512.png" />
+  <meta property="og:image:alt" content="HFL Operating Model logo" />
+  <meta property="og:url" content="https://www.hfloperatingmodel.com/" />
+  <meta property="og:site_name" content="HFL Operating Model" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HFL Operating Model™" />
+  <meta name="twitter:description" content="A leadership operating model designed to connect strategy to execution." />
+  <meta name="twitter:image" content="https://www.hfloperatingmodel.com/images/hfl-logo-512.png" />
+  <meta name="twitter:image:alt" content="HFL Operating Model logo" />
+
   <script type="application/ld+json">
     {
      "@context": "https://schema.org",
@@ -99,15 +116,10 @@
     }
 
     .brand__mark {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      font-size: 0.82rem;
+      width: 148px;
+      height: auto;
+      object-fit: contain;
+      flex: 0 0 auto;
     }
 
     .brand__meta {
@@ -534,6 +546,20 @@
       font-size: 0.92rem;
     }
 
+    .footer__brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer__logo {
+      width: 116px;
+      height: auto;
+      object-fit: contain;
+      flex: 0 0 auto;
+      opacity: 0.92;
+    }
+
     @media (max-width: 1024px) {
       .hero__inner,
       .contact-grid,
@@ -563,6 +589,18 @@
         align-items: flex-start;
       }
 
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand__mark {
+        width: 120px;
+      }
+
+      .footer__logo {
+        width: 96px;
+      }
+
       .hero__actions {
         align-items: stretch;
       }
@@ -577,7 +615,7 @@
   <header class="site-header">
     <div class="wrap site-header__row">
       <a class="brand" href="#top" aria-label="HFL Operating Model home">
-        <span class="brand__mark">HFL</span>
+        <img class="brand__mark" src="images/hfl-logo-512.png" alt="HFL Operating Model logo" />
         <span class="brand__meta">
           <span class="brand__name">The HFL Operating Model™</span>
           <span class="brand__sub">Implemented by Wisconsin Agility</span>
@@ -800,7 +838,7 @@
             more about how leadership operates, let’s talk.
           </p>
           <div class="contact-meta">
-            <div>The HFL Operating Model™ is implemented by <a href="http://www.wisconsinagility.com?utm_source=hfloperatingmodel&utm_medium=referral&utm_campaign=contact_link">Wisconsin Agility</a>.</div>
+            <div>The HFL Operating Model™ is implemented by <a href="https://www.wisconsinagility.com?utm_source=hfloperatingmodel&utm_medium=referral&utm_campaign=contact_link">Wisconsin Agility</a>.</div>
             <div>Use the form to request a conversation with Chad Beier and Jeff Bubolz.</div>
           </div>
         </article>
@@ -817,8 +855,11 @@
 
   <footer class="footer">
     <div class="wrap footer__row">
-      <div>© <span id="year"></span> HFL Operating Model™</div>
-      <div>Implemented by <a href="http://www.wisconsinagility.com?utm_source=hfloperatingmodel&utm_medium=referral&utm_campaign=footer_link">Wisconsin Agility</a></div>
+      <div class="footer__brand">
+        <img class="footer__logo" src="images/hfl-logo-512.png" alt="HFL Operating Model logo" />
+        <div>© <span id="year"></span> HFL Operating Model™</div>
+      </div>
+      <div>Implemented by <a href="https://www.wisconsinagility.com?utm_source=hfloperatingmodel&utm_medium=referral&utm_campaign=footer_link">Wisconsin Agility</a></div>
     </div>
   </footer>
 
